@@ -1,9 +1,6 @@
 'use client'
 import {useEffect} from "react"
 
-import Modal from "@/components/ui/Modal";
-import { Button } from "@/components/ui/button";
-import { UserButton } from "@clerk/nextjs";
 import { useModalStore } from "@/hooks/useModalStore";
 
 export default function SteupPage() {
@@ -16,9 +13,5 @@ export default function SteupPage() {
     }
   }, [isOpen,onOpen])
   
-  return (
-    <div>
-      Create store
-    </div>
-  );
+  return null
 }

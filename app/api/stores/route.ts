@@ -21,7 +21,7 @@ export async function POST(req: Request) {
 
     const store = await prismadb.store.create({ data: { name, userId } });
 
-    return new NextResponse("Store is created.", { status: 200 });
+    return NextResponse.json(store);
   } catch (error) {
     console.log(`[STORE_POST] ${error}`);
     return new NextResponse("Internal error", { status: 500 });
